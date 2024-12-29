@@ -15,7 +15,7 @@ const VendorCard = ({ name, location, image }) => {
       actions={[<HeartOutlined key="like" />]}
       className="rounded-lg overflow-hidden shadow-lg w-full"
     >
-      <h3 className="font-bold text-lg">{name}</h3>
+      <h3 className="font-bold text-lg text-primary">{name}</h3>
       <p className="text-sm text-gray-500">{location}</p>
     </Card>
   );

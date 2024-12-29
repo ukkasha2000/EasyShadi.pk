@@ -27,3 +27,9 @@ code {
 .border-color-primary {
   border-color: #b18d17;
 }
+.ant-tabs-tab-active > .ant-tabs-tab-btn {
+  color: #b18d17 !important; /* Change the text color */
+}
+.ant-tabs-ink-bar-animated {
+  background-color: #b18d17 !important; /* Change the text color */
+}
