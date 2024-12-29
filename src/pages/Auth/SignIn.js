@@ -20,10 +20,7 @@ const SignIn = () => {
           preview={false}
           alt="EasyShadi.pk"
         />
-        <h1
-          className="text-xl lg:text-3xl font-semibold mb-6"
-          style={{ color: "rgb(82 68 22)" }}
-        >
+        <h1 className="text-xl lg:text-3xl font-semibold mb-6 text-primary">
           Welcome Back
         </h1>
 
@@ -49,9 +46,8 @@ const SignIn = () => {
           >
             <Input
               placeholder="Enter your email"
-              className="rounded-md"
+              className="rounded-md border-color-primary"
               size="large"
-              style={{ borderColor: "rgb(177 141 23)" }}
             />
           </Form.Item>
 
@@ -69,19 +65,14 @@ const SignIn = () => {
           >
             <Input.Password
               placeholder="Enter your password"
-              className="rounded-md"
+              className="rounded-md border-color-primary"
               size="large"
-              style={{ borderColor: "rgb(177 141 23)" }}
             />
           </Form.Item>
 
           {/* Forgot Password Link */}
           <div className="text-right mb-4">
-            <a
-              href="#"
-              className="font-semibold"
-              style={{ color: "rgb(213 98 125)" }}
-            >
+            <a href="#" className="font-semibold text-primary">
               Forgot password?
             </a>
           </div>
@@ -91,9 +82,8 @@ const SignIn = () => {
             <Button
               type="primary"
               htmlType="submit"
-              className="w-full text-white rounded-md"
+              className="w-full text-white rounded-md bg-color-secondary"
               size="large"
-              style={{ backgroundColor: "rgb(177 141 23)" }}
             >
               Sign In
             </Button>
@@ -109,9 +99,8 @@ const SignIn = () => {
         <div className="flex flex-col gap-4">
           <Button
             type="primary"
-            className="w-full rounded-md text-white flex items-center justify-center"
+            className="w-full rounded-md text-white flex items-center justify-center bg-color-secondary"
             size="large"
-            style={{ backgroundColor: "rgb(177 141 23)" }}
             icon={<GoogleOutlined />}
           >
             Sign in with Google
@@ -121,11 +110,7 @@ const SignIn = () => {
         {/* Register Link */}
         <div className="text-center mt-6">
           <span className="text-gray-500">Don't have an account? </span>
-          <a
-            href="/signup"
-            className="no-underline font-semibold"
-            style={{ color: "rgb(82 68 22)" }}
-          >
+          <a href="/signup" className="no-underline font-semibold text-primary">
             Sign Up
           </a>
         </div>
@@ -133,11 +118,7 @@ const SignIn = () => {
         {/* Register As Vendor */}
         <div className="text-center mt-2">
           <span className="text-gray-500">Are you a vendor? </span>
-          <a
-            href="#"
-            className="no-underline font-semibold"
-            style={{ color: "rgb(82 68 22)" }}
-          >
+          <a href="#" className="no-underline font-semibold text-primary">
             Join Our Community
           </a>
         </div>

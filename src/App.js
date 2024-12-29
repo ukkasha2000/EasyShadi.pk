@@ -25,7 +25,7 @@ function Layout() {
   return (
     <>
       {showNavbar && <Navbar />}
-      <main className="p-2">
+      <main className="p-2 bg-color-primary">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<SignIn />} />

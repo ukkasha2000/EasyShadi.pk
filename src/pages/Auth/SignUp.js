@@ -1,7 +1,6 @@
 import React from "react";
-import { Form, Input, Button, Image, Typography } from "antd";
+import { Form, Input, Button, Image } from "antd";
 import { GoogleOutlined } from "@ant-design/icons";
-const { Text } = Typography;
 
 const SignUp = () => {
   const onFinish = (values) => {
@@ -21,10 +20,7 @@ const SignUp = () => {
           preview={false}
           alt="EasyShadi.pk"
         />
-        <h1
-          className="text-xl lg:text-3xl font-semibold mb-6"
-          style={{ color: "rgb(82 68 22)" }}
-        >
+        <h1 className="text-xl lg:text-3xl font-semibold mb-6 text-primary">
           Create Account
         </h1>
 
@@ -49,9 +45,8 @@ const SignUp = () => {
           >
             <Input
               placeholder="Enter your username"
-              className="rounded-md"
+              className="rounded-md border-color-primary"
               size="large"
-              style={{ borderColor: "rgb(177 141 23)" }}
             />
           </Form.Item>
 
@@ -69,9 +64,8 @@ const SignUp = () => {
           >
             <Input
               placeholder="Enter your email"
-              className="rounded-md"
+              className="rounded-md border-color-primary"
               size="large"
-              style={{ borderColor: "rgb(177 141 23)" }}
             />
           </Form.Item>
 
@@ -89,9 +83,8 @@ const SignUp = () => {
           >
             <Input.Password
               placeholder="Enter your password"
-              className="rounded-md"
+              className="rounded-md border-color-primary"
               size="large"
-              style={{ borderColor: "rgb(177 141 23)" }}
             />
           </Form.Item>
 
@@ -117,9 +110,8 @@ const SignUp = () => {
           >
             <Input.Password
               placeholder="Confirm your password"
-              className="rounded-md"
+              className="rounded-md border-color-primary"
               size="large"
-              style={{ borderColor: "rgb(177 141 23)" }}
             />
           </Form.Item>
 
@@ -128,9 +120,8 @@ const SignUp = () => {
             <Button
               type="primary"
               htmlType="submit"
-              className="w-full text-white rounded-md"
+              className="w-full text-white rounded-md bg-color-secondary"
               size="large"
-              style={{ backgroundColor: "rgb(177 141 23)" }}
             >
               Sign Up
             </Button>
@@ -146,9 +137,8 @@ const SignUp = () => {
         <div className="flex flex-col gap-4">
           <Button
             type="primary"
-            className="w-full rounded-md text-white flex items-center justify-center"
+            className="w-full rounded-md text-white flex items-center justify-center bg-color-secondary"
             size="large"
-            style={{ backgroundColor: "rgb(177 141 23)" }}
             icon={<GoogleOutlined />}
           >
             Sign up with Google
@@ -161,8 +151,7 @@ const SignUp = () => {
           <a
             href="/termsofuse"
             target="blank"
-            className="font-semibold"
-            style={{ color: "rgb(82 68 22)" }}
+            className="font-semibold text-primary"
           >
             Terms of Use
           </a>{" "}
@@ -170,8 +159,7 @@ const SignUp = () => {
           <a
             href="/privacypolicy"
             target="blank"
-            className="font-semibold"
-            style={{ color: "rgb(82 68 22)" }}
+            className="font-semibold text-primary"
           >
             Privacy Policy
           </a>
@@ -181,11 +169,7 @@ const SignUp = () => {
         {/* Login Link */}
         <div className="text-center mt-6">
           <span className="text-gray-500">Already have an account? </span>
-          <a
-            href="/signin"
-            className="no-underline font-semibold"
-            style={{ color: "rgb(82 68 22)" }}
-          >
+          <a href="/signin" className="no-underline font-semibold text-primary">
             Sign In
           </a>
         </div>
@@ -193,11 +177,7 @@ const SignUp = () => {
         {/* Register As Vendor */}
         <div className="text-center mt-2">
           <span className="text-gray-500">Are you a vendor? </span>
-          <a
-            href="#"
-            className="no-underline font-semibold"
-            style={{ color: "rgb(82 68 22)" }}
-          >
+          <a href="#" className="no-underline font-semibold text-primary">
             Join Our Community
           </a>
         </div>

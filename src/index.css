@@ -18,3 +18,12 @@ code {
 .bg-color-primary {
   background-color: #fdfaf0;
 }
+.text-primary {
+  color: #524416;
+}
+.bg-color-secondary {
+  background-color: #b18d17;
+}
+.border-color-primary {
+  border-color: #b18d17;
+}

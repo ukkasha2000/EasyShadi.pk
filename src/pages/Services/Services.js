@@ -16,11 +16,11 @@ const { TabPane } = Tabs;
 
 const Services = () => {
   return (
-    <div className="container mx-auto p-8">
-      <h1 className="text-3xl font-bold text-center mb-4 text-[rgb(82 68 22)]">
-        Discover the Best Vendors
+    <div className="container mx-auto p-8 bg-color-primary">
+      <h1 className="text-3xl font-bold text-center mb-4 text-primary">
+        Discover The Best Vendors
       </h1>
-      <p className="text-center text-[rgb(82 68 22)]">
+      <p className="text-center text-primary">
         Discover our curated collection of premier event specialists and
         vendors—from exceptional photographers and visionary wedding planners to
         gourmet caterers, and every essential service to make your big day
