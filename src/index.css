@@ -18,8 +18,14 @@ code {
 .bg-color-primary {
   background-color: #fdfaf0;
 }
+.bg-color-dark {
+  background-color: #524416;
+}
 .text-primary {
   color: #524416;
+}
+.text-secondary {
+  color: #b18d17;
 }
 .bg-color-secondary {
   background-color: #b18d17;
