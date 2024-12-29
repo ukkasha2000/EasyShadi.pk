@@ -44,7 +44,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex space-x-8 ">
-          <Link to="/" className="text-white hover:text-gray-400 no-underline">
+          <Link to="/home" className="text-white hover:text-gray-400 no-underline">
             Home
           </Link>
           <Link

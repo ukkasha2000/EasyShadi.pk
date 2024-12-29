@@ -9,6 +9,7 @@ import { Navbar } from "./components";
 import CreateEvent from "./pages/CreateEvent/CreateEvent";
 import ReviewEvents from "./pages/ReviewEvents/ReviewEvents";
 import CreateService from "./pages/CreateService/CreateService";
+import MyServices from "./pages/MyServices/MyServices";
 
 function App() {
   return (
@@ -24,9 +25,6 @@ function Layout() {
     "/signin",
     "/signup",
     "/",
-    "/our-services",
-    "/create-event",
-    "/review-events",
     "/home",
   ];
   // Conditionally render Navbar based on the route
@@ -37,14 +35,15 @@ function Layout() {
       {showNavbar && <Navbar />}
       <main className="p-2 bg-color-primary">
         <Routes>
+          <Route path="/" element={<LandingPage />} />
           <Route path="/home" element={<Home />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/" element={<LandingPage />} />
           <Route path="/our-services" element={<Services />} />
           <Route path="/create-event" element={<CreateEvent />} />
           <Route path="/create-service" element={<CreateService />} />
           <Route path="/review-events" element={<ReviewEvents />} />
+          <Route path="/my-services" element={<MyServices />} />
         </Routes>
       </main>
     </>
