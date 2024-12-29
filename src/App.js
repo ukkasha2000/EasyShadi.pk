@@ -4,7 +4,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-import { Home, SignIn, SignUp } from "./pages";
+import { Home, LandingPage, SignIn, SignUp } from "./pages";
 import { Navbar } from "./components";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
 
 function Layout() {
   const location = useLocation();
-  const hiddenNavbarRoutes = ["/signin", "/signup"];
+  const hiddenNavbarRoutes = ["/signin", "/signup", "/"];
   // Conditionally render Navbar based on the route
   const showNavbar = !hiddenNavbarRoutes.includes(location.pathname);
 
@@ -29,6 +29,7 @@ function Layout() {
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/home" element={<LandingPage />} />
         </Routes>
       </main>
     </>
