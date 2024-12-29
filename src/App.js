@@ -10,6 +10,10 @@ import CreateEvent from "./pages/CreateEvent/CreateEvent";
 import ReviewEvents from "./pages/ReviewEvents/ReviewEvents";
 import CreateService from "./pages/CreateService/CreateService";
 import MyServices from "./pages/MyServices/MyServices";
+import ServiceDetails from "./pages/ServiceDetails/ServiceDetails";
+import ServiceForCustomer from "./pages/ServiceForCustomer/ServiceForCustomer";
+import VendorDetails from "./pages/VendorDetails/VendorDetails";
+import EventDetails from "./pages/EventDetails/EventDetails";
 
 function App() {
   return (
@@ -44,6 +48,10 @@ function Layout() {
           <Route path="/create-service" element={<CreateService />} />
           <Route path="/review-events" element={<ReviewEvents />} />
           <Route path="/my-services" element={<MyServices />} />
+          <Route path="/service/:id" element={<ServiceDetails />} />
+          <Route path="/service-details/:id" element={<ServiceForCustomer />} />
+          <Route path="/vendor-details/:id" element={<VendorDetails />} />
+          <Route path="/event-details/:id" element={<EventDetails />} />
         </Routes>
       </main>
     </>

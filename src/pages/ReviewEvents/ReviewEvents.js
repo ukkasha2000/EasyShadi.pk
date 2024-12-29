@@ -54,7 +54,7 @@ const ReviewEvents = () => {
   return (
     <div className="p-5 bg-[#fdfcf9] min-h-screen">
       {/* Header */}
-      <header className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-10 rounded-lg shadow-lg text-center mb-8">
+      <header className="bg-color-dark text-white p-10 rounded-lg shadow-lg text-center mb-8">
         <h1 className="text-4xl font-bold">My Events</h1>
         <p className="text-lg mt-2">Review and rate your past events.</p>
       </header>

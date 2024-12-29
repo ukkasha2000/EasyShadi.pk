@@ -20,8 +20,14 @@ const Navbar = () => {
       <Menu.Item key="profile">
         <Link to="/profile">Profile</Link>
       </Menu.Item>
+      <Menu.Item key="my services">
+        <Link to="/my-services">My Services</Link>
+      </Menu.Item>
+      <Menu.Item key="my Events">
+        <Link to="/review-events">Review Events</Link>
+      </Menu.Item>
       <Menu.Item key="logout">
-        <Link to="/logout">Logout</Link>
+        <Link to="/">Logout</Link>
       </Menu.Item>
     </Menu>
   );
@@ -53,7 +59,7 @@ const Navbar = () => {
           >
             Our Services
           </Link>
-          <Link
+          {/* <Link
             to="/aboutus"
             className="text-white hover:text-gray-400 no-underline"
           >
@@ -64,7 +70,7 @@ const Navbar = () => {
             className="text-white hover:text-gray-400 no-underline"
           >
             Contact Us
-          </Link>
+          </Link> */}
 
           {/* User Dropdown */}
           <Dropdown overlay={userMenu} trigger={["click"]}>
