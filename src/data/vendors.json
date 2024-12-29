@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Skylands Manor",
+    "location": "Ringwood, New Jersey",
+    "image": "url_to_image1"
+  },
+  {
+    "name": "Amistad Córdoba",
+    "location": "Córdoba, Spain",
+    "image": "url_to_image2"
+  },
+  {
+    "name": "Rosecliff Mansion",
+    "location": "Newport, Rhode Island",
+    "image": "url_to_image3"
+  },
+  {
+    "name": "The Barnsdale",
+    "location": "Oakham, England",
+    "image": "url_to_image4"
+  }
+]
