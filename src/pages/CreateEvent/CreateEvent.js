@@ -31,114 +31,156 @@ const CreateEvent = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#fdfcf9] flex items-center justify-center">
-      <div className="bg-white p-16 rounded-md shadow-lg max-w-md w-full">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">
-          Tell Us A Little Bit About Your Event
-        </h2>
-        <p className="text-gray-600 mb-6">
-          This will help us personalize your experience.
-        </p>
-        <form className="space-y-4" onSubmit={handleSubmit}>
+    <div className="min-h-screen bg-[#fdfcf9] flex items-center justify-center p-5">
+      <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-2xl">
+        {/* Header */}
+        <header className="mb-6 text-center">
+          <h1 className="text-3xl font-bold text-gray-800">Create Your Event</h1>
+          <p className="text-gray-600 mt-2">
+            Fill in the details below to plan your perfect event.
+          </p>
+        </header>
+
+        {/* Form */}
+        <form onSubmit={handleSubmit} className="space-y-6">
           {/* Event Date */}
-          <input
-            type="date"
-            name="eventDate"
-            className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-gray-800 focus:outline-none"
-            value={formData.eventDate}
-            onChange={handleChange}
-            required
-          />
+          <div>
+            <label htmlFor="eventDate" className="block text-gray-700 font-medium mb-1">
+              Event Date
+            </label>
+            <input
+              type="date"
+              name="eventDate"
+              id="eventDate"
+              className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-gray-800 focus:outline-none"
+              value={formData.eventDate}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
           {/* Event City */}
-          <input
-            type="text"
-            name="eventCity"
-            className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-gray-800 focus:outline-none"
-            placeholder="Event City"
-            value={formData.eventCity}
-            onChange={handleChange}
-            required
-          />
+          <div>
+            <label htmlFor="eventCity" className="block text-gray-700 font-medium mb-1">
+              Event City
+            </label>
+            <input
+              type="text"
+              name="eventCity"
+              id="eventCity"
+              className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-gray-800 focus:outline-none"
+              placeholder="Enter the city"
+              value={formData.eventCity}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
           {/* Event Venue */}
-          <input
-            type="text"
-            name="eventVenue"
-            className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-gray-800 focus:outline-none"
-            placeholder="Event Venue"
-            value={formData.eventVenue}
-            onChange={handleChange}
-            required
-          />
+          <div>
+            <label htmlFor="eventVenue" className="block text-gray-700 font-medium mb-1">
+              Event Venue
+            </label>
+            <input
+              type="text"
+              name="eventVenue"
+              id="eventVenue"
+              className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-gray-800 focus:outline-none"
+              placeholder="Enter the venue"
+              value={formData.eventVenue}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
           {/* Event Type */}
-          <select
-            name="eventType"
-            className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-gray-800 focus:outline-none"
-            value={formData.eventType}
-            onChange={handleChange}
-            required
-          >
-            <option value="" disabled>
-              Select Event Type
-            </option>
-            {eventTypes.map((type) => (
-              <option key={type} value={type}>
-                {type}
+          <div>
+            <label htmlFor="eventType" className="block text-gray-700 font-medium mb-1">
+              Event Type
+            </label>
+            <select
+              name="eventType"
+              id="eventType"
+              className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-gray-800 focus:outline-none"
+              value={formData.eventType}
+              onChange={handleChange}
+              required
+            >
+              <option value="" disabled>
+                Select Event Type
               </option>
-            ))}
-          </select>
+              {eventTypes.map((type) => (
+                <option key={type} value={type}>
+                  {type}
+                </option>
+              ))}
+            </select>
+          </div>
 
           {/* Guest Count */}
-          <input
-            type="number"
-            name="guestCount"
-            className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-gray-800 focus:outline-none"
-            placeholder="Guest Count"
-            value={formData.guestCount}
-            onChange={handleChange}
-            required
-          />
+          <div>
+            <label htmlFor="guestCount" className="block text-gray-700 font-medium mb-1">
+              Guest Count
+            </label>
+            <input
+              type="number"
+              name="guestCount"
+              id="guestCount"
+              className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-gray-800 focus:outline-none"
+              placeholder="Enter the number of guests"
+              value={formData.guestCount}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-          {/* Outdoor/Indoor */}
-          <div className="flex items-center justify-between">
-            <label className="flex items-center text-gray-600">
-              <input
-                type="radio"
-                name="eventSetting"
-                value="Outdoor"
-                checked={formData.eventSetting === 'Outdoor'}
-                onChange={handleChange}
-                required
-                className="mr-2"
-              />
-              Outdoor
-            </label>
-            <label className="flex items-center text-gray-600">
-              <input
-                type="radio"
-                name="eventSetting"
-                value="Indoor"
-                checked={formData.eventSetting === 'Indoor'}
-                onChange={handleChange}
-                required
-                className="mr-2"
-              />
-              Indoor
-            </label>
+          {/* Event Setting */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-1">Event Setting</label>
+            <div className="flex items-center space-x-4">
+              <label className="flex items-center text-gray-600">
+                <input
+                  type="radio"
+                  name="eventSetting"
+                  value="Outdoor"
+                  checked={formData.eventSetting === 'Outdoor'}
+                  onChange={handleChange}
+                  required
+                  className="mr-2"
+                />
+                Outdoor
+              </label>
+              <label className="flex items-center text-gray-600">
+                <input
+                  type="radio"
+                  name="eventSetting"
+                  value="Indoor"
+                  checked={formData.eventSetting === 'Indoor'}
+                  onChange={handleChange}
+                  required
+                  className="mr-2"
+                />
+                Indoor
+              </label>
+            </div>
           </div>
 
           {/* Budget */}
-          <input
-            type="number"
-            name="budget"
-            className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-gray-800 focus:outline-none"
-            placeholder="Budget"
-            value={formData.budget}
-            onChange={handleChange}
-            required
-          />
+          <div>
+            <label htmlFor="budget" className="block text-gray-700 font-medium mb-1">
+              Budget
+            </label>
+            <input
+              type="number"
+              name="budget"
+              id="budget"
+              className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-gray-800 focus:outline-none"
+              placeholder="Enter your budget"
+              value={formData.budget}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
           {/* Submit Button */}
           <button

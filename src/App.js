@@ -19,7 +19,7 @@ function App() {
 
 function Layout() {
   const location = useLocation();
-  const hiddenNavbarRoutes = ["/signin", "/signup", "/", "/our-services", "/create-event", "/review-events"];
+  const hiddenNavbarRoutes = ["/signin", "/signup", "/", "/our-services", "/create-event", "/review-events", "/home"];
   // Conditionally render Navbar based on the route
   const showNavbar = !hiddenNavbarRoutes.includes(location.pathname);
 
