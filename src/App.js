@@ -7,6 +7,7 @@ import {
 import { Home, LandingPage, SignIn, SignUp, Services } from "./pages";
 import { Navbar } from "./components";
 import CreateEvent from "./pages/CreateEvent/CreateEvent";
+import ReviewEvents from "./pages/ReviewEvents/ReviewEvents";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
 
 function Layout() {
   const location = useLocation();
-  const hiddenNavbarRoutes = ["/signin", "/signup", "/", "/our-services", "/create-event"];
+  const hiddenNavbarRoutes = ["/signin", "/signup", "/", "/our-services", "/create-event", "/review-events"];
   // Conditionally render Navbar based on the route
   const showNavbar = !hiddenNavbarRoutes.includes(location.pathname);
 
@@ -27,12 +28,13 @@ function Layout() {
       {showNavbar && <Navbar />}
       <main className="p-2 bg-color-primary">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/home" element={<LandingPage />} />
+          <Route path="/" element={<LandingPage />} />
           <Route path="/our-services" element={<Services />} />
           <Route path="/create-event" element={<CreateEvent />} />
+          <Route path="/review-events" element={<ReviewEvents />} />
         </Routes>
       </main>
     </>
