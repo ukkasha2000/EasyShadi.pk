@@ -4,7 +4,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-import { Home, LandingPage, SignIn, SignUp } from "./pages";
+import { Home, LandingPage, SignIn, SignUp, Services } from "./pages";
 import { Navbar } from "./components";
 
 function App() {
@@ -30,6 +30,7 @@ function Layout() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/home" element={<LandingPage />} />
+          <Route path="/our-services" element={<Services />} />
         </Routes>
       </main>
     </>
