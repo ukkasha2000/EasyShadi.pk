@@ -1,9 +1,9 @@
 import React from "react";
-import { Card } from "antd";
+import { Card, Rate } from "antd";
 import { Link } from "react-router-dom";
 import { HeartOutlined } from "@ant-design/icons";
 
-const VendorCard = ({ id, name, location, image }) => {
+const VendorCard = ({ id, name, location, image, rating }) => {
   return (
     <Link to={`/service-details/${id}`} className="no-underline">
       <Card
@@ -19,6 +19,10 @@ const VendorCard = ({ id, name, location, image }) => {
       >
         <h3 className="font-bold text-lg text-primary">{name}</h3>
         <p className="text-sm text-gray-500">{location}</p>
+        <div className="flex items-center mt-2">
+          <Rate allowHalf disabled defaultValue={rating} />
+          <span className="ml-2 text-sm text-gray-500">({rating}/5)</span>
+        </div>
       </Card>
     </Link>
   );
